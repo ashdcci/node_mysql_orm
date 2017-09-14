@@ -1,0 +1,51 @@
+{
+    "site":{
+      "url":"http://192.168.1.72:4044",
+      "port":4044,
+      "views":"ejs",
+      "local_upload_path":"./public/images/",
+      "default_image_path":"/dist/img/mentees-icon.png"
+    },
+    "dbConfig": {
+      "host": "localhost",
+      "port": 3306,
+      "dbname": "poppin",
+      "user": "root",
+      "password": "signity"
+    },
+    "sendgrid": {
+      "from":"tpay@tpay.com.au",
+      "host":"smtp.sendgrid.com",
+      "port":"587",
+      "method":"SMTP",
+      "user":"TPAY",
+      "password":"airbus320"
+    },
+    "twilio":{
+      "sid":"ACc7d0bce245b26aedfa67a17931e1c544",
+      "token":"a4579cd2c30ce5ec808f448cbbf8732f",
+      "number":"+61438052436",
+      "country_code":"+91"
+    },
+    "redis":{
+      "host":"localhost",
+      "port":6379,
+      "ttl":864000
+    },
+    "morgan":{
+      "mode":"dev"
+    },
+    "stripe":{
+      "test_key":"sk_test_HXzN0MQU8uKORiWNOQj01MJT",
+      "live_key":"",
+      "key":"sk_test_HXzN0MQU8uKORiWNOQj01MJT"
+    },
+    "aws":{
+      "bucket":"s3-tpay",
+      "region":"ap-southeast-2",
+      "acl":"public-read-write",
+      "path":"https://s3-ap-southeast-2.amazonaws.com/s3-tpay/",
+      "key":"AKIAIL6XRPO6OH5NWBUA",
+      "secret":"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"
+    }
+}
