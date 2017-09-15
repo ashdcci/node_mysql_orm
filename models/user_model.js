@@ -15,6 +15,7 @@ var user_model 			= function(){
         updated_at: Sequelize.DATE,
         access_token: Sequelize.STRING
       });
+  crypto = require('crypto')
  };
 
 /**
@@ -78,5 +79,22 @@ user_model.prototype.updateToken = (data,callback) => {
     User.update({access_token: data.token},{where:{email:data.email} });
 }
 
+
+user_model.prototype.authenticate = (email,password, callback) =>{
+
+  User.findOne({attributes: ['id','email','created_at'],where: {email: email,password:crypto.createHash("md5").update(password).digest('hex')}})
+      .then((users) => callback(null,users))
+      .catch(err => callback(err, null))
+}
+
+user_model.prototype.serializeUser = (user, callback) =>{
+  callback(null, user.id);
+}
+
+user_model.prototype.deserializeUser = (id, callback) =>{
+  User.findById(id, function (err, user) {
+    callback(err, user);
+  });
+}
 
 module.exports = new user_model();

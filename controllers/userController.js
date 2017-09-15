@@ -76,4 +76,13 @@ userController.prototype.login = (req, res, next) =>{
     return
 }
 
+
+userController.prototype.testview = (req, res, next) =>{
+    check_var = ''
+    for(i = 0;i<10;i++){
+        check_var +='<h2>check vars'+i+'</h2>'
+    }
+    return res.render('test',{check:check_var})
+}
+
 module.exports = new userController();
