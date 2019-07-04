@@ -4,7 +4,9 @@
   "description": "node mysql orm description",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "ashish",
   "dependencies": {
@@ -21,7 +23,9 @@
     "passport": "^0.4.0",
     "passport-facebook": "^2.1.1",
     "passport-local": "^1.0.0",
-    "sequelize": "^4.8.3"
+    "sequelize": "^4.8.3",
+    "snyk": "^1.190.0"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "snyk": true
 }
