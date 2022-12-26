@@ -9,7 +9,7 @@
   "author": "ashish",
   "dependencies": {
     "body-parser": "~1.15.1",
-    "config": "^1.24.0",
+    "config": "^3.3.1",
     "crypto": "^1.0.1",
     "ejs": "~2.5.5",
     "ejs-mate": "^2.3.0",
